@@ -1,0 +1,51 @@
+section.introduce(style="background-image:url(images/main.jpg)")
+  .introduce__box.box
+    .introduce__title.title Широкоформатная печать
+    .introduce__subTitle Оперативное производство рекламной продукции
+    a.introduce__link.btnRed(href="#") Оставить заявку
+
+section.spec
+  .spec__box.box
+    .spec__title.title.title--before.title--after.alignCenter Наша специализация
+    .spec__slider
+      .slider
+        .slider__btn.slider__btn--left.jsSliderBtnLeft
+        .slider__btn.slider__btn--right.jsSliderBtnRight
+        .slider__box.jsSlider
+          .slider__inner.spec__items
+              each val, i in ["Широкоформатная печать","Полиграфия","Световая реклама","Мобильные стенды","Модульные картины","Монтаж рекламы","Обработка материалов"]
+                a.slider__item.spec__item(href="#")
+                  .spec__name=val
+                  img.spec__img(src="images/spec/" + (i+1) + ".jpg")
+
+section.task
+  .task__box.box
+    .task__title.title.title--before Поставьте нам задачу!
+    .task__grid
+      .task__text
+        .task__textInner
+          p Желаете заказать Наружную рекламу? Экспертное продвижение ваших проектов от Groupnet!
+          p Если вы хотите заказать сайт или рекламу, то вы оказались на нужном ресурсе! Мы уже более 7 лет экспертно решаем задачи наших клиентов/партнеров в сфере Digital. Мы специализируемся на реализации трех видов услуг: цифровая наружная реклама, контекстная реклама, создание сайтов.
+          p Желаете заказать Наружную рекламу? Экспертное продвижение ваших проектов от Groupnet!
+          p Если вы хотите заказать сайт или рекламу, то вы оказались на нужном ресурсе! Мы уже более 7 лет экспертно решаем задачи наших клиентов/партнеров в сфере Digital. Мы специализируемся на реализации трех видов услуг: цифровая наружная реклама, контекстная реклама, создание сайтов.
+      .task__video
+        a.task__videoLink(href="#")
+          img.task__videoPoster(src="images/video.jpg")
+      .task__contacts
+        .task__contact Москва
+          img.task__ico.task__ico--point(src="images/ico/point.svg")
+        .task__contact 
+          img.task__ico.task__ico--phone(src="images/ico/phone2.svg")
+          a(href="tel:#") +7(495) 111-45-65
+      .task__linkWrap
+        a.task__link.btnRed(href="#") Оставить заявку
+
+section.clients
+  .clients__box.box
+    .clients__title.title.title--before Наши клиенты
+    .clients__items
+      - for (var i=1; i<=15; i++)
+        .clients__item
+          img.clients__img(src='images/clients/' + i + '.png')
+    .clients__linkWrap
+      .clients__link.jsClientsBtn Смотреть все

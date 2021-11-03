@@ -1,0 +1,76 @@
+svg.hide
+  include svg
+
+noscript.noscript Чтобы посмотреть сайт включите JavaScript на&nbsp;своём устройстве.
+
+//-.popup
+  a.popup__closer.js-closePopup(href="#")
+  .popup__layer
+  .popup__box
+    .form__wrap
+      .form__box
+        .form__title.js-formTitle
+        form.form.popup__form(action='/' name='sign' method='POST')
+          input.popup__input.form__input.js-requireText(type='text' name="name" value='' placeholder='Ваше имя' minlength='2' tabindex="1")
+          input.popup__input.form__input.js-requirePhone(type='text' name="phone" value='' placeholder='Ваш телефон' minlength='10' tabindex="2")
+          input.form__input.form__input--hide(type='text' name="type" value='')
+          input.popup__input.form__input.form__input--hide(type='text' name="text" value='')
+          button.btn.form__submit.form__submit.disabled(type='submit' disabled="disabled" tabindex="3") Отправить
+      .form__loader
+        svg.img-loader
+          use(xlink:href='#ico-loader')
+      .form__answer-send
+        .form__title
+          p Спасибо, заявка отправлена!
+      .form__answer-error
+        .form__title
+          p Что-то пошло не&nbsp;так, попробуйте снова!
+
+header.header
+  .header__box.box
+    .header__logo
+      a.logo(href="/")
+        img(src="images/logo.png")
+    .header__phone
+      a.phone(href="tel:#")
+        img.phone__ico.phone__ico--dsc(src="images/ico/phone.svg")
+        img.phone__ico.phone__ico--mob(src="images/ico/phone3.svg")
+    .header__toggle.jsHeaderToggle(data-text="Закрыть") MENU
+    .header__nav
+      nav.nav
+        .nav__item
+          a.nav__link(href="#") Главная
+        .nav__item
+          a.nav__link(href="#") Диджитал реклама
+        .nav__item
+          a.nav__link(href="#") Типография и производство
+          .nav__sub
+            .nav__item
+              a.nav__link(href="#") Полиграфия
+            .nav__item
+              a.nav__link(href="#") Широкоформатная печать
+            .nav__item
+              a.nav__link(href="#") Печать стандартных рекламных форматов
+            .nav__item
+              a.nav__link(href="#") Печать на тканях
+        .nav__item
+          a.nav__link(href="#") Дизайн студия
+        .nav__item
+          a.nav__link(href="#") Оформление мероприятий
+        .nav__item
+          a.nav__link(href="#") Оформление и обслуживание торговых центров
+        .nav__item
+          a.nav__link(href="#") Пресс-воллы и Ролл-ап стенды
+          .nav__sub
+            .nav__item
+              a.nav__link(href="#") Стенды Roll-up
+            .nav__item
+              a.nav__link(href="#") Пресс - воллы
+        .nav__item
+          a.nav__link(href="#") Мобильные стенды
+        .nav__item
+          a.nav__link(href="#") Монтаж рекламы
+        .nav__item
+          a.nav__link(href="#") Технические требования к файлам
+        .nav__item
+          a.nav__link(href="#") Контакты
