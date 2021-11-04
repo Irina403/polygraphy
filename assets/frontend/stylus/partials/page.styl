@@ -122,6 +122,7 @@ a:hover
     align-items center
     padding-top cw(56)
     padding-left 100px
+    z-index 999999
 
     @media (min-width: $widthMobile)
       padding-top 0
@@ -578,3 +579,47 @@ a:hover
 .nav__link
   padding-right 10px
 
+.screenPage
+  height 100vh
+  background-image: url(../images/images-page.jpg)
+  background-size: cover
+
+.mainTitle
+  padding-top 240px
+  text-align center
+  // padding-right 100px
+  // padding-left 100px
+  position relative
+  max-width 1200px
+  margin 0 auto
+
+.titleBlock
+  &__text
+    font-size 60px
+    color #fff
+    font-weight 500
+
+.textBlock
+  &__text
+    margin-top 20px
+    color #fff
+    font-size 23px
+    font-weight 400
+
+
+
+
+.blockButton
+  margin-top 50px
+  margin-bottom 50px
+  &__list
+    justify-content: space-between
+    display flex
+  &__item
+    padding 10px
+    border: 1px solid #000000
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.06);
+    font-size 23px
+    font-weight 300
