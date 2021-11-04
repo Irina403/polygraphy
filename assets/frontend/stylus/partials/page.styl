@@ -108,18 +108,20 @@ a:hover
 /* HEADER */
 
 .header
-  position absolute
-  left 0
-  top 0
-  border-bottom 2px solid rgba(255, 255, 255, .27)
-  width 100%
-  z-index 9
-  color #fff
+  
+  // border-bottom 2px solid rgba(255, 255, 255, .27)
+  // width 100%
+  // z-index 9
+  // color #fff
 
   &__box
+    left 0
+    top 0
+    position absolute
     display flex
     align-items center
     padding-top cw(56)
+    padding-left 100px
 
     @media (min-width: $widthMobile)
       padding-top 0
@@ -133,6 +135,7 @@ a:hover
     font-weight 700
     text-transform uppercase
     padding 1rem
+    color #fff
 
   &__nav
     width: 100%;
@@ -181,7 +184,7 @@ a:hover
         display block
 
 .nav
-  display flex
+  display block
   gap 1.5rem cw(27)
   line-height: 1.2
   flex-direction: column
@@ -501,3 +504,123 @@ a:hover
       transform translate(0, -50%) rotate(45deg)
       border .1rem solid #000
       border-width .1rem .1rem 0 0
+
+
+
+// МОДАЛЬНОЕ ОКНО
+.popup-fade 
+	display: none;
+
+.popup-fade:before 
+	content: '';
+	background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.7;
+	z-index: 9999;
+
+.popup
+  padding-top 10px
+  padding-left 100px
+  padding-right 100px
+  width 100%
+  height 100%
+  position: fixed
+  // transform: translate(-50%, -50%)
+  background: rgba(51, 51, 51, 0.52)
+  backdrop-filter: blur(43px);
+  z-index 99999
+  opacity 1
+  color #fff
+  xs(height, 80%)
+  xs(width, 90%)
+  xs(padding, 10px 30px)
+  xs(overflow-x, hidden)
+  xs(overflow-y, auto)
+
+.headerBlock
+  padding-bottom 50px
+  display flex
+  width 100%
+  justify-content: space-between
+  &__brand
+    font-size 45px
+    font-family $fontUbuntu
+    font-weight 700
+  &__close
+    display flex
+    align-items: center
+.nav__wrapp
+    position relative
+.popup-close
+  padding-left 10px
+.nav__item
+  margin-bottom 10px
+  font-family $fontUbuntu
+  font-weight 300
+.submenu
+  position: absolute
+  color #fff
+  top 0
+  right 0
+.submenu-style
+  right 25%
+.navSub
+  display flex
+  flex-direction: column
+
+
+  
+// .oneHover:hover~.oneSub
+//   color green
+//   opacity 1
+
+
+
+ 
+
+// .nav__item .oneHover:hover.nav__sub.oneSub
+//   display block
+
+// ul.menu > li {
+//     float: left;
+//     position: relative;
+// }
+// ul.menu > li > a {
+//     display: block;
+//     padding: 10px;
+//     color: white;
+//     background-color: red;
+//     text-decoration: none;
+// }
+// ul.menu > li > a:hover {
+//     background-color: black;
+// }
+// ul.submenu {
+//     display: none;
+//     position: absolute;
+//     width: 120px;
+//     top: 37px;
+//     left: 0;
+//     background-color: white;
+//     border: 1px solid red;
+// }
+// ul.submenu > li {
+//     display: block;
+// }
+// ul.submenu > li > a {
+//     display: block;
+//     padding: 10px;
+//     color: white;
+//     background-color: red;
+//     text-decoration: none;
+// }
+// ul.submenu > li > a:hover {
+//     text-decoration: underline;
+// }
+// ul.menu > li:hover > ul.submenu {
+//     display: block;
+// }

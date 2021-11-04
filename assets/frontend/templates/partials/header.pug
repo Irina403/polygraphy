@@ -27,45 +27,80 @@ noscript.noscript Чтобы посмотреть сайт включите Java
           p Что-то пошло не&nbsp;так, попробуйте снова!
 
 header.header
-  .header__box.box
-    .header__logo
-      a.logo(href="/")
-        img(src="images/logo.png")
-    .header__phone
-      a.phone(href="tel:#")
-        img.phone__ico.phone__ico--dsc(src="images/ico/phone.svg")
-        img.phone__ico.phone__ico--mob(src="images/ico/phone3.svg")
-    .header__toggle.jsHeaderToggle(data-text="Закрыть") MENU
-    .header__nav
-      nav.nav
+.header__box.box
+  .header__logo
+    a.logo(href="/")
+      img(src="images/logo.png")
+  .header__phone
+    a.phone(href="tel:#")
+      img.phone__ico.phone__ico--dsc(src="images/ico/phone.svg")
+      img.phone__ico.phone__ico--mob(src="images/ico/phone3.svg")
+  .header__toggle.jsHeaderToggle(data-text="Закрыть").popup-open(data-id="menu_head") MENU 
+  .header__nav
+  .popup-fade#menu_head
+    
+    nav.nav.popup
+      .popup__header.headerBlock
+        .headerBlock__brand PlayArt
+        .headerBlock__close
+          img(src="images/ico/phone.svg", alt="")
+          .popup-close Закрыть
+      .nav__wrapp
+        //- .menu 
+        //-   ul 
+        //-     li.parent
+        //-       a.nav__link(href="#") Типография и производство
+
+        //-         ul.submenu 
+        //-           li 
+        //-             a(href="#") HELLO 
+        //-           li 
+        //-             a(href="#") HELLO
+        
+        //-     li.parent
+        //-       a.nav__link(href="#") 2Типография и производство
+
+        //-         ul.submenu 
+        //-           li 
+        //-             a(href="#") HELLO333 
+        //-           li 
+        //-             a(href="#") HELLO333
+
+
+
+  
         .nav__item
           a.nav__link(href="#") Главная
         .nav__item
           a.nav__link(href="#") Диджитал реклама
-        .nav__item
-          a.nav__link(href="#") Типография и производство
-          .nav__sub
+        ul.navSub
+          li.nav__item.parent
+            a.nav__link(href="#") Типография и производство
+              ul.submenu
+                li.nav__item
+                  a.nav__link(href="#") Полиграфия
+                li.nav__item
+                  a.nav__link(href="#") Широкоформатная печать
+                li.nav__item
+                  a.nav__link(href="#") Печать стандартных рекламных форматов
+                li.nav__item
+                  a.nav__link(href="#") Печать на тканях
+          div
             .nav__item
-              a.nav__link(href="#") Полиграфия
+              a.nav__link(href="#") Дизайн студия
             .nav__item
-              a.nav__link(href="#") Широкоформатная печать
+              a.nav__link(href="#") Оформление мероприятий
             .nav__item
-              a.nav__link(href="#") Печать стандартных рекламных форматов
+              a.nav__link(href="#") Оформление и обслуживание торговых центров
             .nav__item
-              a.nav__link(href="#") Печать на тканях
-        .nav__item
-          a.nav__link(href="#") Дизайн студия
-        .nav__item
-          a.nav__link(href="#") Оформление мероприятий
-        .nav__item
-          a.nav__link(href="#") Оформление и обслуживание торговых центров
-        .nav__item
-          a.nav__link(href="#") Пресс-воллы и Ролл-ап стенды
-          .nav__sub
-            .nav__item
-              a.nav__link(href="#") Стенды Roll-up
-            .nav__item
-              a.nav__link(href="#") Пресс - воллы
+
+          li.nav__item.parent
+            a.nav__link(href="#") Пресс-воллы и Ролл-ап стенды
+              ul.submenu.submenu-style
+                li.nav__item
+                  a.nav__link(href="#") Стенды Roll-up
+                li.nav__item
+                  a.nav__link(href="#") Пресс - воллы
         .nav__item
           a.nav__link(href="#") Мобильные стенды
         .nav__item
@@ -74,3 +109,5 @@ header.header
           a.nav__link(href="#") Технические требования к файлам
         .nav__item
           a.nav__link(href="#") Контакты
+
+

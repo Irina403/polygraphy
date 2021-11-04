@@ -33,52 +33,64 @@
             </symbol>
         </svg>
         <noscript class="noscript">Чтобы посмотреть сайт включите JavaScript на&nbsp;своём устройстве.</noscript>
-        <header class="header">
-            <div class="header__box box">
-                <div class="header__logo">
-                    <a class="logo" href="/">
-                        <img src="images/logo.png">
-                    </a>
-                </div>
-                <div class="header__phone">
-                    <a class="phone" href="tel:#">
-                        <img class="phone__ico phone__ico--dsc" src="images/ico/phone.svg">
-                        <img class="phone__ico phone__ico--mob" src="images/ico/phone3.svg">
-                    </a>
-                </div>
-                <div class="header__toggle jsHeaderToggle" data-text="Закрыть">MENU</div>
-                <div class="header__nav">
-                    <nav class="nav">
+        <header class="header"></header>
+        <div class="header__box box">
+            <div class="header__logo">
+                <a class="logo" href="/">
+                    <img src="images/logo.png">
+                </a>
+            </div>
+            <div class="header__phone">
+                <a class="phone" href="tel:#">
+                    <img class="phone__ico phone__ico--dsc" src="images/ico/phone.svg">
+                    <img class="phone__ico phone__ico--mob" src="images/ico/phone3.svg">
+                </a>
+            </div>
+            <div class="header__toggle jsHeaderToggle popup-open" data-text="Закрыть" data-id="menu_head">MENU</div>
+            <div class="header__nav"></div>
+            <div class="popup-fade" id="menu_head">
+                <nav class="nav popup">
+                    <div class="popup__header headerBlock">
+                        <div class="headerBlock__brand">PlayArt</div>
+                        <div class="headerBlock__close">
+                            <img src="images/ico/phone.svg" alt="">
+                            <div class="popup-close">Закрыть</div>
+                        </div>
+                    </div>
+                    <div class="nav__wrapp">
                         <div class="nav__item"><a class="nav__link" href="#">Главная</a>
                         </div>
                         <div class="nav__item"><a class="nav__link" href="#">Диджитал реклама</a>
                         </div>
-                        <div class="nav__item"><a class="nav__link" href="#">Типография и производство</a>
-                            <div class="nav__sub">
-                                <div class="nav__item"><a class="nav__link" href="#">Полиграфия</a>
-                                </div>
-                                <div class="nav__item"><a class="nav__link" href="#">Широкоформатная печать</a>
-                                </div>
-                                <div class="nav__item"><a class="nav__link" href="#">Печать стандартных рекламных форматов</a>
-                                </div>
-                                <div class="nav__item"><a class="nav__link" href="#">Печать на тканях</a>
-                                </div>
+                        <ul class="navSub">
+                            <li class="nav__item parent"><a class="nav__link" href="#">Типография и производство<ul class="submenu"><li class="nav__item"><a class="nav__link" href="#">Полиграфия</a>
+                            </li>
+                            <li class="nav__item"><a class="nav__link" href="#">Широкоформатная печать</a>
+                            </li>
+                            <li class="nav__item"><a class="nav__link" href="#">Печать стандартных рекламных форматов</a>
+                            </li>
+                            <li class="nav__item"><a class="nav__link" href="#">Печать на тканях</a>
+                            </li>
+                        </ul>
+                        </a>
+                        </li>
+                        <div>
+                            <div class="nav__item"><a class="nav__link" href="#">Дизайн студия</a>
                             </div>
-                        </div>
-                        <div class="nav__item"><a class="nav__link" href="#">Дизайн студия</a>
-                        </div>
-                        <div class="nav__item"><a class="nav__link" href="#">Оформление мероприятий</a>
-                        </div>
-                        <div class="nav__item"><a class="nav__link" href="#">Оформление и обслуживание торговых центров</a>
-                        </div>
-                        <div class="nav__item"><a class="nav__link" href="#">Пресс-воллы и Ролл-ап стенды</a>
-                            <div class="nav__sub">
-                                <div class="nav__item"><a class="nav__link" href="#">Стенды Roll-up</a>
-                                </div>
-                                <div class="nav__item"><a class="nav__link" href="#">Пресс - воллы</a>
-                                </div>
+                            <div class="nav__item"><a class="nav__link" href="#">Оформление мероприятий</a>
                             </div>
+                            <div class="nav__item"><a class="nav__link" href="#">Оформление и обслуживание торговых центров</a>
+                            </div>
+                            <div class="nav__item"></div>
                         </div>
+                        <li class="nav__item parent"><a class="nav__link" href="#">Пресс-воллы и Ролл-ап стенды<ul class="submenu submenu-style"><li class="nav__item"><a class="nav__link" href="#">Стенды Roll-up</a>
+                        </li>
+                        <li class="nav__item"><a class="nav__link" href="#">Пресс - воллы</a>
+                        </li>
+                        </ul>
+                        </a>
+                        </li>
+                        </ul>
                         <div class="nav__item"><a class="nav__link" href="#">Мобильные стенды</a>
                         </div>
                         <div class="nav__item"><a class="nav__link" href="#">Монтаж рекламы</a>
@@ -87,10 +99,10 @@
                         </div>
                         <div class="nav__item"><a class="nav__link" href="#">Контакты</a>
                         </div>
-                    </nav>
-                </div>
+                    </div>
+                </nav>
             </div>
-        </header>
+        </div>
         <div class="content">
             <div class="content__breadcrumb content__wrap">
                 <div class="breadcrumb"><a class="breadcrumb__item" href="/">Главная</a><a class="breadcrumb__item" href="#">Ошибка 404</a>
