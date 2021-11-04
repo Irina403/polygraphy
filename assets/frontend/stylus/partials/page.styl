@@ -606,9 +606,6 @@ a:hover
     font-size 23px
     font-weight 400
 
-
-
-
 .blockButton
   margin-top 50px
   margin-bottom 50px
@@ -623,3 +620,129 @@ a:hover
     background-color: rgba(0, 0, 0, 0.06);
     font-size 23px
     font-weight 300
+
+ .informationTitle
+    display flex
+    align-items: center
+    &__line
+      width 64px
+      height 3px
+      background-color: #000
+      margin-right 15px
+    
+    &__text
+      fs(60)
+      font-weight 500
+      color #F31818
+  
+  .textBlock 
+    margin-top 30px
+    display flex
+    justify-content: space-between
+    align-items: center
+  
+  .col-text 
+    width 50%
+    &__item
+      margin-top 30px
+
+.buttonOrder
+  width 263px
+  border 3px solid #F31818
+  color #F31818
+  padding 20px
+  display flex
+  align-items: center
+  justify-content: center
+  border-radius: 10px
+
+// .tableS
+// {
+//     font-family: Montserrat-bold;
+//     font-size: 24px;
+//     padding: 1rem 1rem;
+//     padding-left: 20px;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+//     color: #000;
+//     background-color: #ffba33;
+// }
+
+.table-wrap
+    display: inline-block;
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+
+table
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border 1px solid #000
+
+
+table tr
+
+    padding: 2px;
+
+table th, table td
+
+    font-size: 16px;
+    // width: 33%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: left;
+    border 1px solid #000
+    text-align center
+  
+table th
+
+    fs(22)
+    color: #000;
+    letter-spacing: -0.035em;
+    font-weight: bold;
+
+.titleTable 
+  margin-top 50px
+  color #F31818
+  fs(25)
+
+  
+.lineContent 
+  margin-top 70px
+  width 100%
+  height 3px
+  background-color rgba(23, 23, 23, 0.17)
+  margin-bottom 70px
+   
+@media screen and (max-width: 600px) 
+  table 
+    border: 0;
+  
+  table thead 
+    display: none;
+  
+  table tr 
+    margin-bottom: 10px;
+    display: block;
+    border-bottom: 2px solid #ddd;
+  
+  table td 
+    display: block;
+    text-align: right;
+    font-size: 10px;
+  
+  table td:last-child 
+    border-bottom: 0;
+  
+  table td:before 
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
