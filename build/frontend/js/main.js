@@ -337,7 +337,7 @@ $(this).fadeOut();
 $(function () {
   $(".submenu").hide();
   $(".parent").click(function (e) {
-      e.preventDefault();
+      // e.preventDefault();
       if (!$(e.target).closest("ul").is(".submenu")) {
           $(".submenu", this).toggle();
           $(this).siblings(".parent").find(".submenu").hide();

@@ -35,44 +35,21 @@ header.header
     a.phone(href="tel:#")
       img.phone__ico.phone__ico--dsc(src="images/ico/phone.svg")
       img.phone__ico.phone__ico--mob(src="images/ico/phone3.svg")
-  .header__toggle.jsHeaderToggle(data-text="Закрыть").popup-open(data-id="menu_head") MENU 
+  .header__toggle.popup-open(data-id="menu_head") MENU 
   .header__nav
   .popup-fade#menu_head
     
     nav.nav.popup
-      .popup__header.headerBlock
+      .popup__header.headerBlock.box
         .headerBlock__brand PlayArt
         .headerBlock__close
           img(src="images/ico/phone.svg", alt="")
           .popup-close Закрыть
-      .nav__wrapp
-        //- .menu 
-        //-   ul 
-        //-     li.parent
-        //-       a.nav__link(href="#") Типография и производство
-
-        //-         ul.submenu 
-        //-           li 
-        //-             a(href="#") HELLO 
-        //-           li 
-        //-             a(href="#") HELLO
-        
-        //-     li.parent
-        //-       a.nav__link(href="#") 2Типография и производство
-
-        //-         ul.submenu 
-        //-           li 
-        //-             a(href="#") HELLO333 
-        //-           li 
-        //-             a(href="#") HELLO333
-
-
-
-  
+      .nav__wrapp.box
         .nav__item
-          a.nav__link(href="#") Главная
+          a.nav__link(href="index.html") Главная
         .nav__item
-          a.nav__link(href="#") Диджитал реклама
+          a.nav__link(href="") Диджитал реклама
         ul.navSub
           li.nav__item.parent
             a.nav__link(href="#") Типография и производство 
@@ -100,9 +77,9 @@ header.header
             <svg width="16" height="29" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L14 14.5L1 28" stroke="white" stroke-width="2"/></svg>
               ul.submenu.submenu-style
                 li.nav__item
-                  a.nav__link(href="#") Стенды Roll-up
+                  a.nav__link(href="stand-roll-up.html") Стенды Roll-up
                 li.nav__item
-                  a.nav__link(href="#") Пресс - воллы
+                  a.nav__link(href="press-voll.html") Пресс - воллы
         .nav__item
           a.nav__link(href="#") Мобильные стенды
         .nav__item
