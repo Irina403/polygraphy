@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block content
+  include ../content/contacts
+  
+block scripts
+  +script([
+    'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
+
+    'swiper.min.js',
+    'main.js'
+  ])
