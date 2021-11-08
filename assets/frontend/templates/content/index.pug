@@ -1,8 +1,13 @@
-section.introduce(style="background-image:url(images/main.jpg)")
-  .introduce__box.box
-    .introduce__title.title Широкоформатная печать
-    .introduce__subTitle Оперативное производство рекламной продукции
-    a.introduce__link.btnRed(href="#") Оставить заявку
+section.introduce
+  .introduceOverlay
+    .introduce__box.box
+      .introduce__title.title Широкоформатная печать
+      .introduce__subTitle Оперативное производство рекламной продукции
+      a.introduce__link.btnRed(href="#").popup-open(data-id="contactFormPopup") Оставить заявку
+  video.video(loop="" muted="" autoplay="" poster="images/main.jpg" class="fullscreen-bg__video")
+    source(src="video/video-bg.mov" type="video/mov")
+    source(src="video/video-bg.mp4" type="video/mp4")
+  
 
 section.spec
   .spec__box.box
@@ -29,8 +34,11 @@ section.task
           p Желаете заказать Наружную рекламу? Экспертное продвижение ваших проектов от Groupnet!
           p Если вы хотите заказать сайт или рекламу, то вы оказались на нужном ресурсе! Мы уже более 7 лет экспертно решаем задачи наших клиентов/партнеров в сфере Digital. Мы специализируемся на реализации трех видов услуг: цифровая наружная реклама, контекстная реклама, создание сайтов.
       .task__video
-        a.task__videoLink(href="#")
-          img.task__videoPoster(src="images/video.jpg")
+        .task__videoLink
+          video(loop="" muted="" autoplay="" poster="images/video.jpg" class="fullscreen-bg__video")
+            source(src="video/video-second.mov" type="video/mov")
+            source(src="video/video-second.mp4" type="video/mp4")
+          //- img.task__videoPoster(src="")
       .task__contacts
         .task__contact Москва
           img.task__ico.task__ico--point(src="images/ico/point.svg")
@@ -38,7 +46,7 @@ section.task
           img.task__ico.task__ico--phone(src="images/ico/phone2.svg")
           a(href="tel:#") +7(495) 111-45-65
       .task__linkWrap
-        a.task__link.btnRed(href="#") Оставить заявку
+        a(href="#").task__link.btnRed.popup-open(data-id="contactFormPopup") Оставить заявку
 
 section.clients
   .clients__box.box
@@ -50,3 +58,17 @@ section.clients
     .clients__linkWrap
       .clients__link.jsClientsBtn Смотреть все
 
+.popup-fade#contactFormPopup.myModal
+  .popup-ContactForm
+    .popupForm 
+      .popupForm__close 
+        img(src="images/ico/close.svg", alt="")
+      .popupForm__headWrapper
+        .popupForm__head Оставить заявку
+        .popupForm__text Оставьте ваши данные и наш менеджер свяжется с Вами для уточнения деталей 
+      
+      form(action="#").contactForm
+        input.contactForm__placeWrite(type="text" placeholder="Ваше имя")
+        input.contactForm__placeWrite(type="text" placeholder="+7 (---) --- -- --")  
+        input.contactForm__button(type="submit" value="Отправить")
+        .contactForm__personDate Оставляя заявку, вы даете согласие на обработку персональных данных

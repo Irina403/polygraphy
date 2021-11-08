@@ -51,18 +51,19 @@ header.header
         .nav__item
           a.nav__link(href="digital-advert.html") Диджитал реклама
         ul.navSub
-          li.nav__item.parent
-            a.nav__link(href="#") Типография и производство 
-            <svg width="16" height="29" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L14 14.5L1 28" stroke="white" stroke-width="2"/></svg>
-              ul.submenu
-                li.nav__item
-                  a.nav__link(href="polygraphy.html") Полиграфия
-                li.nav__item
-                  a.nav__link(href="large-format.html") Широкоформатная печать
-                li.nav__item
-                  a.nav__link(href="standart-format.html") Печать стандартных рекламных форматов
-                li.nav__item
-                  a.nav__link(href="print.html") Печать на тканях
+          li.nav__item.parent.parent-mobile
+             .arrow-next.mobile-wrapper-nav
+              a.nav__link(href="#") Типография и производство 
+                //- img.next-img(src="images/ico/arrow-popup.svg", alt="")
+                ul.submenu
+                  li.nav__item
+                    a.nav__link(href="polygraphy.html") Полиграфия
+                  li.nav__item
+                    a.nav__link(href="large-format.html") Широкоформатная печать
+                  li.nav__item
+                    a.nav__link(href="standart-format.html") Печать стандартных рекламных форматов
+                  li.nav__item
+                    a.nav__link(href="print.html") Печать на тканях
           div
             .nav__item
               a.nav__link(href="design-studio.html") Дизайн студия
@@ -77,9 +78,10 @@ header.header
             .nav__item
               a.nav__link(href="3d-letters.html") Объемные буквы
 
-          li.nav__item.parent
-            a.nav__link(href="#") Пресс-воллы и Ролл-ап стенды
-            <svg width="16" height="29" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L14 14.5L1 28" stroke="white" stroke-width="2"/></svg>
+          li.nav__item.parent.parent-mobile
+            .arrow-next.mobile-wrapper-nav
+             a.nav__link(href="#") Пресс-воллы и Ролл-ап стенды
+              //- img.next-img(src="images/ico/arrow-popup.svg", alt="")
               ul.submenu.submenu-style
                 li.nav__item
                   a.nav__link(href="stand-roll-up.html") Стенды Roll-up

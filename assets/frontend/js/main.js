@@ -305,7 +305,7 @@ var appContent = (function() {
 $('.popup-open').click(function(e) {
   e.preventDefault()
   target = '#' + $(this).attr('data-id')
-  // console.log(target)
+  console.log(target)
 $(target).fadeIn(function () {
       // $(this).children( ".popup" ).css("display", "block").animate({ opacity: 1 }, 198);
 // return false;
@@ -328,11 +328,24 @@ $('.popup-fade').fadeOut();
 
 // Клик по фону, но не по окну.
 $('.popup-fade').click(function(e) {
-if ($(e.target).closest('.popup').length == 0) {
+if ($('.popup').length == 0)  {
 $(this).fadeOut();					
 }
-
 });
+
+// Клик по фону, но не по окну.
+$('.popup-fade').click(function(e) {
+  if ($('.popup-ContactForm').length == 0)  {
+  $(this).fadeOut();					
+  }
+  
+  });
+  
+
+$('.popupForm__close').click(function() {
+  $(this).parents('.popup-fade').fadeOut();
+  return false;
+  });
 
 $(function () {
   $(".submenu").hide();
@@ -342,5 +355,9 @@ $(function () {
           $(".submenu", this).toggle();
           $(this).siblings(".parent").find(".submenu").hide();
       }
+  });
+  $(".parent").click(function () {
+    $('.mobile-wrapper-nav').toggleClass("arrow-next arrow-down");
+
   });
 });

@@ -40,6 +40,7 @@ a:hover
   max-width 124rem
   padding 0 2rem
   margin 0 auto
+  z-index 99999
 
 .title
   font-weight 500
@@ -111,11 +112,12 @@ a:hover
   &__box
     left 0
     top 0
+    right 0
     position absolute
     display flex
     align-items center
-    padding-top cw(56)
-    padding-left 100px
+    padding-top cw(16)
+    // padding-left 100px
     z-index 999999
 
     @media (min-width: $widthMobile)
@@ -259,22 +261,61 @@ a:hover
       fs(20)
 
 
+.footer2
+  background-color: #fff
 
 
 
 /* CONTENT */
 
+.task__grid
+  display grid !important
 .introduce
-  background url(../images/bg_intro.jpg) no-repeat center top
-  background-size cover
-  display flex
-  flex-direction column
-  justify-content center
-  min-height 48rem
-  height 100vh
+    padding-top 50px
+    padding-bottom 50px
+    overflow: hidden;
+    z-index: -100;
+    position: relative;
+    height: 100vh
+    width: 100%;
+    // padding-top:45%;
+  // background url(../images/bg_intro.jpg) no-repeat center top
+  // background-size cover
+  // display flex
+  // flex-direction column
+  // justify-content center
+  // min-height 48rem
+  // height 100vh
+  // color #fff
+  // text-align center
+  // line-height 1.4
+
+.introduce video
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+.introduceOverlay
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+
+
+.introduce__box
+  margin-top 15%
   color #fff
-  text-align center
-  line-height 1.4
+
+.introduce__subTitle
+  margin-top 20px
+  margin-bottom 40px
+
+
+
 
   @media (min-width: $widthMobile)
     text-align left
@@ -341,8 +382,10 @@ a:hover
     grid-template-columns repeat(2, 47.5%)
     gap 1.4rem 5%
 
+
     @media (min-width: $widthMobile)
-      gap 5.4rem 5%
+      gap 9.4rem 5%
+      display block
 
   &__text
     max-height 27.5rem
@@ -400,7 +443,7 @@ a:hover
         transform translate(-50%,-50%)
         width 3.6rem
         height 3.6rem
-        background url(../images/ico/play.svg)
+        // background url(../images/ico/play.svg)
         background-size contain
         transition .32s all
 
@@ -528,22 +571,86 @@ a:hover
 
 .popup
   padding-top 15px
-  // padding-left 100px
-  // padding-right 20%
   width 100%
   height 100%
   position: fixed
-  // transform: translate(-50%, -50%)
   background: rgba(51, 51, 51, 0.52)
   backdrop-filter: blur(10px);
   z-index 99999
-  // opacity 1
   color #fff
-  xs(height, 80%)
-  xs(width, 90%)
-  xs(padding, 10px 30px)
-  xs(overflow-x, hidden)
-  xs(overflow-y, auto)
+
+.popup-ContactForm
+  position fixed
+  padding-top 50px
+  padding-left 30px
+  padding-right 20px
+  top 50%
+  left 50%
+  max-width: 320px
+  height 457px
+  // max-width 80vw
+  // max-height: 100vh
+  transform translate(-50%, -50%)
+  background: rgba(0, 0, 0, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  box-sizing: border-box;
+  border-radius: 13px;
+  z-index 999999
+  opacity 2
+  color #fff
+.popupForm
+  &__close 
+    position: absolute
+    right 15px
+    top 15px
+  &__headWrapper
+    margin-bottom 10px
+    
+  &__head
+    font-size: 25px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+   
+  &__text 
+    margin-top 20px
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.29);
+
+.contactForm
+  &__placeWrite
+    padding-left 10px
+    margin-top 20px
+    max-width: 213px
+    height 41px
+    background: linear-gradient(99.98deg, rgba(255, 255, 255, 0.26) -31.53%, rgba(255, 255, 255, 0) 95.05%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    border-radius: 7px;
+  &__button
+    margin-top 20px
+    width 167px
+    height 47px
+    border: 3px solid #F31818;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color #F31818;
+    font-size: 19px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    background: rgba(0, 0, 0, 0.42);
+  &__personDate
+    margin-top 20px
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.29);
+
+
+
+
+
 
 .headerBlock
   padding-bottom 50px
@@ -565,7 +672,9 @@ a:hover
 .nav__item
   margin-bottom 10px
   font-family $fontUbuntu
-  font-weight 300
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: -0.07em;
 .submenu
   position: absolute
   color #fff
@@ -580,13 +689,24 @@ a:hover
 .parent
   display flex
   align-items: center
-.nav__link
-  padding-right 10px
+  background-image url(../images/ico/arrow-popup.svg)
+  background-repeat: no-repeat
+  background-position: 25% 50%
+
+
+// .nav__link
+
+.next-img
+  margin-left 10px
 
 .screenPage
   height 100vh
   background-image: url(../images/images-page.jpg)
   background-size: cover
+  &-contact
+    background-image: url(../images/contacts.jpg)
+    height 45vh
+
 
 .mainTitle
   padding-top 240px
@@ -621,6 +741,7 @@ a:hover
     color #fff
     font-size 23px
     font-weight 400
+
 
 .blockButton
   margin-top 50px
@@ -741,7 +862,8 @@ table th
   height 3px
   background-color rgba(23, 23, 23, 0.17)
   margin-bottom 70px
-   
+
+
 @media screen and (max-width: 600px) 
   table 
     border: 0;
@@ -768,22 +890,123 @@ table th
     text-transform: uppercase;
     font-weight: bold;
 
+  .task__grid
+    width 100%
+    display block
+  .fullscreen-bg__video
+    width 100%
+  .introduce
+    margin-top -50px
+
+  .introduceOverlay
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom 20px
+    height 100vh
+  .video
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  .introduce__box
+    margin-top 50%
+    color #fff
+  .nav
+    display block
+    gap 1.5rem cw(27)
+    line-height: 1.2
+    flex-direction: column
+    align-items: center
+    width: 100%;
+    &:after
+      height 0%
+  .parent
+    background-image none
+  .parent-mobile
+    display block
+  .submenu
+    position relative
+  // .parent
+  //   display flex
+  //   align-items: center
+  //   background-image url(../images/ico/arrow-popup.svg)
+  //   background-repeat: no-repeat
+  //   background-position: 25% 50%
+  .arrow-next
+    background-position: 80% 10px
+    background-repeat: no-repeat
+    background-image url(../images/ico/next-mobile.svg)
+  .arrow-down
+    background-position: 80% 10px
+    background-repeat: no-repeat
+    background-image url(../images/ico/down-mobile.svg)
+  .submenu-style
+    right 0%
+  .titleBlock__text
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: -0.065em;
+  .textBlock__text
+    font-size 15px
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: -0.07em;
+  .mainTitle
+    padding-top 100px
+  .screenPage
+    height 60vh
+  .blockButton
+    display none
+  .col-text
+    width 100%
+  .textBlock
+    flex-wrap: wrap
+  .col-text__item 
+    order 1
+  .textBlock__col-image 
+    order -1 
+  .rowTable
+    font-size 15px
+  .tableBlockRow
+    margin-top 30px
+    margin-bottom 30px
+  // table td
+  //   padding-left 5px
+  //   padding-right 15px
+  //   font-size 11px
+  .screenPage-contact
+    height 25vh
+//КОНЕЦ МЕДИА ЗАПРОСОВ
+
+
+
+
+
 .blockButton-stylePosition
   display flex
   justify-content: flex-end
 
 .rowTable
   border 1px solid #000
-  width 100%
+  // width 100%
   display flex
   justify-content: space-between
   align-items: center
   font-size 23px
   &__nameCol
+    width 65%
     padding-left 10px
     padding-right 30px
   &__textCol
-    width 200px
+    width 45%
+    // width 200px
     display flex
     justify-content: center
     align-items: center
