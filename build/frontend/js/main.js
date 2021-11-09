@@ -312,6 +312,13 @@ $(target).fadeIn(function () {
   })
 });	
 
+$('.popup-open-modalForm').click(function(e) {
+  e.preventDefault()
+  $('.myModal').fadeIn(function () {
+      // $(this).children( ".popup" ).css("display", "block").animate({ opacity: 1 }, 198);
+// return false;
+  })
+});	
 // Клик по ссылке "Закрыть".
 $('.popup-close').click(function() {
 $(this).parents('.popup-fade').fadeOut();
