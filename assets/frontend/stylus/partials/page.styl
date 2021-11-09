@@ -101,24 +101,21 @@ a:hover
 
 
 /* HEADER */
-
 .header
-  
-  // border-bottom 2px solid rgba(255, 255, 255, .27)
-  // width 100%
-  // z-index 9
-  // color #fff
-
+  position: fixed
+  border-bottom 2px solid rgba(255, 255, 255, .27)
+  width 100%
+  color #fff
+  z-index 999
   &__box
     left 0
     top 0
     right 0
-    position absolute
     display flex
     align-items center
     padding-top cw(16)
-    // padding-left 100px
-    z-index 999999
+
+
 
     @media (min-width: $widthMobile)
       padding-top 0
@@ -144,6 +141,9 @@ a:hover
     @media (min-width: 1080px)
       padding: 0 cw(17) 0 0
       max-width: cw(555)
+
+.animate-header
+  background:black;
 
 .logo
   display block
@@ -258,7 +258,7 @@ a:hover
     fs(12)
 
     @media (min-width: $widthMobile)
-      fs(20)
+      fs(20)  
 
 
 .footer2
@@ -271,30 +271,32 @@ a:hover
 .task__grid
   display grid !important
 .introduce
-    padding-top 50px
-    padding-bottom 50px
-    overflow: hidden;
-    z-index: 100;
-    position: relative;
-    height: 100vh
-    width: 100%;
-    // padding-top:45%;
-  // background url(../images/bg_intro.jpg) no-repeat center top
-  // background-size cover
-  // display flex
-  // flex-direction column
-  // justify-content center
-  // min-height 48rem
-  // height 100vh
-  // color #fff
-  // text-align center
-  // line-height 1.4
+  position relative
+  overflow: hidden;
+  background: url(/img/poster.jpg) center repeat;
+  z-index: 100;
+  min-height: 870px;
+  max-height: 870px;
+  display: block;
+  width: 100%;
+  max-width: 2560px;
+    // padding-top 50px
+    // padding-bottom 50px
+    // overflow: hidden;
+    // z-index: 100;
+    // position: relative;
+    // height: 100vh
+    // width: 100%;
 
 .introduce video
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 125%;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
 
 .introduceOverlay
   background: rgba(0,0,0,0.6);
@@ -307,7 +309,7 @@ a:hover
 
 
 .introduce__box
-  margin-top 15%
+  margin-top 25%
   color #fff
 
 .introduce__subTitle
@@ -863,8 +865,21 @@ table th
   background-color rgba(23, 23, 23, 0.17)
   margin-bottom 70px
 
+.mainLink 
+  margin-bottom 40px
+  color #fff
+  font-size: 23px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: -0.07em;
 
+.mainLink span
+  color rgba(255, 255, 255, 0.42);
+.screenPage-contact
+    height 55vh
 @media screen and (max-width: 600px) 
+  .mainLink 
+    font-size 18px
   table 
     border: 0;
   
@@ -892,16 +907,13 @@ table th
 
   .task__grid
     width 100%
-    display block
+    display block !important
   .fullscreen-bg__video
     width 100%
-  .introduce
-    margin-top -50px
 
   .introduceOverlay
     max-width: 960px;
     margin: 0 auto;
-    position: relative;
     padding-top: 20px;
     padding-bottom 20px
     height 100vh
@@ -913,9 +925,11 @@ table th
     height: 100%;
     top: 0;
     left: 0;
+  .introduce
+    min-height: 100%
   .introduce__box
-    margin-top 50%
-    color #fff
+    // margin-top 50%
+    // color #fff
   .nav
     display block
     gap 1.5rem cw(27)

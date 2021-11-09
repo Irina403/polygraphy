@@ -368,3 +368,11 @@ $(function () {
 
   });
 });
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 100) {
+      $("header").addClass("animate-header");
+          } else {
+      $("header").removeClass("animate-header");
+  }
+});
